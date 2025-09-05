@@ -3,31 +3,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import dashboardHero from "@/assets/dashboard-hero.png"
-
-const quickActions = [
-  {
-    title: "Upload Script",
-    description: "Create new content from your script",
-    icon: Plus,
-    variant: "default" as const,
-    href: "/scripts"
-  },
-  {
-    title: "Generate Thumbnail",
-    description: "AI-powered thumbnail creation",
-    icon: Plus,
-    variant: "secondary" as const,
-    href: "/thumbnails"
-  },
-  {
-    title: "Generate Video",
-    description: "Transform scripts into videos",
-    icon: Plus,
-    variant: "outline" as const,
-    href: "/videos"
-  }
-]
 
 const activityItems = [
   {
@@ -99,28 +74,6 @@ export default function Dashboard() {
           <p className="text-white/90 text-lg mb-6">
             Your content creation studio is ready. Let's make something amazing!
           </p>
-          <div className="flex gap-4">
-            {quickActions.map((action) => (
-              <Button
-                key={action.title}
-                variant={action.variant}
-                className="bg-white/10 backdrop-blur border-white/20 hover:bg-white/20 text-white"
-                asChild
-              >
-                <a href={action.href}>
-                  <action.icon className="w-4 h-4 mr-2" />
-                  {action.title}
-                </a>
-              </Button>
-            ))}
-          </div>
-        </div>
-        <div className="absolute inset-0 opacity-10">
-          <img 
-            src={dashboardHero} 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
         </div>
       </div>
 
@@ -183,44 +136,6 @@ export default function Dashboard() {
                 </div>
               </div>
             ))}
-          </CardContent>
-        </Card>
-
-        {/* Engagement Overview */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Engagement Overview</CardTitle>
-            <CardDescription>Last 7 days performance</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span>YouTube</span>
-                <span className="font-medium">68%</span>
-              </div>
-              <Progress value={68} className="h-2" />
-            </div>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span>Instagram</span>
-                <span className="font-medium">45%</span>
-              </div>
-              <Progress value={45} className="h-2" />
-            </div>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span>TikTok</span>
-                <span className="font-medium">32%</span>
-              </div>
-              <Progress value={32} className="h-2" />
-            </div>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span>LinkedIn</span>
-                <span className="font-medium">28%</span>
-              </div>
-              <Progress value={28} className="h-2" />
-            </div>
           </CardContent>
         </Card>
       </div>
