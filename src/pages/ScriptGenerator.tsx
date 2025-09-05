@@ -105,31 +105,32 @@ export default function ScriptGenerator() {
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Script & Caption Generator</h1>
+        <h1 className="text-3xl font-bold mb-2">Caption & Hashtag Generator</h1>
         <p className="text-muted-foreground">
-          Transform your scripts into platform-specific captions and hashtags with AI assistance
+          Transform your content into platform-specific captions and hashtags with AI assistance
         </p>
       </div>
 
-      {/* Script Input Section */}
+      {/* Content Input Section */}
       <Card className="mb-8">
         <CardHeader>
           <CardTitle className="flex items-center">
             <Sparkles className="w-5 h-5 mr-2 text-primary" />
-            Your Script
+            Your Content
           </CardTitle>
           <CardDescription>
-            Paste or type your video script here. AI will generate optimized captions for each platform.
+            What's On Your Mind Today?<br />
+            Share your thoughts, ideas, or content. AI will generate optimized captions and hashtags for each platform.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="script">Video Script</Label>
+            <Label htmlFor="script">Your Content</Label>
             <Textarea
               id="script"
-              placeholder="Paste your video script here... 
+              placeholder="Share what's on your mind... 
 
-Example: 'Hey everyone! Today I'm sharing the top 5 social media tips that helped me grow my following to 100K. First tip is consistency - posting at the same time daily increases engagement by 23%...'"
+Example: 'Just discovered 5 game-changing social media tips that helped me grow to 100K followers! Consistency is key - posting at the same time daily boosts engagement by 23%. Here's what else worked...'"
               value={script}
               onChange={(e) => setScript(e.target.value)}
               className="min-h-[200px] resize-none"
